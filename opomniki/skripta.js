@@ -10,9 +10,25 @@ window.addEventListener('load', function() {
 		document.querySelector(".pokrivalo").style.visibility = "hidden";
 	}
 	
-	document.querySelector("#prijavniGumb").addEventListener("click", potrdiPrijavo);
+	var dodajOpomnik = function() {
+		var a = document.querySelector("#naziv_opomnika").value;
+		var b = document.querySelector("#cas_opomnika").value;
 		
+		document.querySelector("#naziv_opomnika").value = "";
+		document.querySelector("#cas_opomnika").value = "";
+		
+		opomniki.innerHTML += "<div class='opomnik'><div class='naziv_opomnika'>"+a+"</div><div class='cas_opomnika'>Opomnik čez<span> "+b+" </span>sekund.</div></div>";
+          
+		
+		
+		
+		
+	}
+	
+	document.querySelector("#prijavniGumb").addEventListener("click", potrdiPrijavo);
+	document.querySelector("#dodajGumb").addEventListener("click", dodajOpomnik);	
 	//Posodobi opomnike
+	
 	var posodobiOpomnike = function() {
 		var opomniki = document.querySelectorAll(".opomnik");
 		
