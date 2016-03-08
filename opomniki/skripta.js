@@ -19,10 +19,6 @@ window.addEventListener('load', function() {
 		
 		opomniki.innerHTML += "<div class='opomnik'><div class='naziv_opomnika'>"+a+"</div><div class='cas_opomnika'>Opomnik čez<span> "+b+" </span>sekund.</div></div>";
           
-		
-		
-		
-		
 	}
 	
 	document.querySelector("#prijavniGumb").addEventListener("click", potrdiPrijavo);
