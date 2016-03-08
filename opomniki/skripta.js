@@ -1,5 +1,16 @@
 window.addEventListener('load', function() {
 	//stran nalozena
+	
+	
+	//Naloga3 se klice ob gumbu Potrdi
+	var potrdiPrijavo = function() {
+		//alert("Hello");
+		var uporabnik = document.querySelector("#uporabnisko_ime").value;
+		document.querySelector("#uporabnik").innerHTML = uporabnik; 
+		document.querySelector(".pokrivalo").style.visibility = "hidden";
+	}
+	
+	document.querySelector("#prijavniGumb").addEventListener("click", potrdiPrijavo);
 		
 	//Posodobi opomnike
 	var posodobiOpomnike = function() {
